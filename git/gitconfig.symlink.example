@@ -30,6 +30,6 @@
 [apply]
         whitespace = nowarn
 [github]
-        user = micralon
+        user = emischorr
 [mergetool]
         keepBackup = false
