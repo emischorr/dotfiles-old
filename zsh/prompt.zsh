@@ -2,6 +2,10 @@ autoload colors && colors
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
+git_sha() {
+  echo $(/usr/bin/git log 2>/dev/null | head -1 | awk -F' ' {'print substr($2, 0, 7)'})
+}
+
 git_branch() {
   echo $(/usr/bin/git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
 }
@@ -74,7 +78,7 @@ directory_name(){
 
 export PROMPT=$'\n$(rvm_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
+  export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%} $(git_sha)"
 }
 
 precmd() {
