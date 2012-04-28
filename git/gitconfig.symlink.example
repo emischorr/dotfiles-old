@@ -19,6 +19,8 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
+        unstate = reset HEAD --
+        last    = log -1 HEAD
 [color]
         ui = true
         diff = auto
