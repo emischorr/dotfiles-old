@@ -8,3 +8,12 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+# hub aliased as git
+# https://github.com/defunkt/hub
+if $(hub &>/dev/null)
+then
+  #alias git="hub"
+  eval "$(hub alias -s zsh)"
+  function git(){hub "$@"}
+fi
