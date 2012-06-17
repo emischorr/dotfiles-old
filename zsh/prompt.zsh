@@ -11,7 +11,7 @@ git_branch() {
 }
 
 git_dirty() {
-  st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
+  st=$(LANG=en_GB /usr/bin/git status 2>/dev/null | tail -n 1)
   if [[ $st == "" ]]
   then
     echo ""
