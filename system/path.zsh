@@ -1,4 +1,4 @@
-PATH=".:bin:/usr/local/bin:/usr/local/sbin:$HOME/.sfs:$ZSH/bin:$PATH:$HOME/bin"
+PATH="$PATH:.:bin:/usr/local/bin:/usr/local/sbin:$HOME/.sfs:$ZSH/bin:$HOME/bin"
 PATH=$PATH:/opt/node/bin
 export PATH
 
